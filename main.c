@@ -20,6 +20,7 @@
  * with this program; if not, visit the http://fsf.org website.
  */
 
+#include "stdio.h"
 #include "rsync.h"
 #include "inums.h"
 #include "ifuncs.h"
@@ -1832,6 +1833,18 @@ int main(int argc,char *argv[])
 		}
 	}
 
+int main(int argc,char *argv[])
+
+{
+
+	int ret;
+
+	printf("I was here!\n");
+
+	raw_argc = argc;
+
+	raw_argv = argv;
+	
 	if (argc < 1) {
 		usage(FERROR);
 		exit_cleanup(RERR_SYNTAX);
